@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: 1s width ease-in;
+            color: #fff;
+        }
+        #box:hover {
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+<div id = "box"></div>
+<script>
+/*box.onclick = function(){
+        this.style.width = "800px";
+};*/
+
+box.addEventListener("click",function(){
+    this.style.width = "800px";
+    this.style.height = "400px";
+});
+
+// transitionend 监听元素的transition动画，执行完了
+// 如果有多条样式执行了transition动画，那每条样式执行完之后，都会触发 transitionend 事件
+
+box.addEventListener("transitionend",function (e) {
+console.log("动画执行完了", e.propertyName);
+});
+/*
+    element.addEventListener("eventname",fn);
+        eventname 事件名称 (不加on)
+*/
+
+</script>
+</body>
+</html>
