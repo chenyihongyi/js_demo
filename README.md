@@ -93,4 +93,7 @@ console.log(["0"]+0 == [0]+0); // true
 	- 两侧都是布尔值时，直接比较值是否相同
 	- 两侧都是对象时，比较两个对象的引用地址是否相同
 	
-https://developer.mozilla.org/zh-CN
+	
+	
+MDN文档:	
+https://developer.mozilla.org/zh-CN/
